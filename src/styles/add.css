@@ -1,0 +1,35 @@
+.add-section {
+  margin-bottom: 150px;
+}
+.add-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+}
+.add-item {
+  text-align: center;
+  /* background-color: red; */
+}
+.add-img {
+  width: 52px;
+  aspect-ratio: 1;
+  margin-bottom: 20px;
+}
+.add-title {
+  margin-bottom: 20px;
+}
+.text {
+}
+.add-text {
+}
+
+@media (max-width: 1000px) {
+  .add-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .add-list {
+    grid-template-columns: 1fr;
+  }
+}

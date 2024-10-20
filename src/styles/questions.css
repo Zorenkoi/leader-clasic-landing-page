@@ -1,0 +1,109 @@
+.questions-section {
+  margin-bottom: 180px;
+}
+.questions-body {
+  display: grid;
+  grid-template-columns: 450px 1fr;
+  gap: 50px;
+}
+.questions-head {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  width: 100%;
+  height: 100%;
+}
+
+.questions-text {
+  max-width: 400px;
+  flex: 1;
+}
+
+.accordion {
+  display: grid;
+  gap: 50px;
+  padding: 15px 0px;
+}
+.accordion-item {
+  display: grid;
+}
+.accordion-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+.accordion-item-body {
+  overflow: hidden;
+  transition-duration: 0.3s;
+}
+.accordion-item-body-content {
+  padding-top: 20px;
+}
+
+.accordion-item-button {
+  position: relative;
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #24242d;
+  font-size: 35px;
+  font-weight: 400;
+  color: white;
+  transition-duration: 0.2s;
+}
+.accordion-item-button.arrow::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  aspect-ratio: 1;
+  border: 4px solid white;
+  border-top: none;
+  border-left: none;
+  transform: translateY(-2px) rotate(45deg);
+}
+.accordion-item-button img {
+  display: none;
+}
+.accordion-item-text {
+  flex: 1;
+}
+
+.accordion-item.active .accordion-item-button {
+  background: linear-gradient(322deg, #82c36d 2.26%, #25523e 92.51%);
+}
+.accordion-item.active .accordion-item-button.arrow {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 1120px) {
+  .questions-body {
+    grid-template-columns: 1fr;
+  }
+  .questions-head {
+    text-align: center;
+    align-items: center;
+  }
+}
+@media (max-width: 500px) {
+  .accordion {
+    gap: 45px;
+  }
+  .accordion-item-button {
+    width: 30px;
+    font-size: 20px;
+  }
+  .accordion-item {
+    gap: 15px;
+  }
+  .accordion-item-button.arrow::before {
+    width: 12px;
+    border: 2px solid white;
+    border-top: none;
+    border-left: none;
+    transform: translateY(-3px) rotate(45deg);
+  }
+}

@@ -1,0 +1,81 @@
+.timer-container {
+  position: relative;
+  border-radius: 19px;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.06) 0%,
+    rgba(255, 255, 255, 0.06) 100%
+  );
+  padding: 20px 20px 20px 50px;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.gift {
+  height: 150px;
+}
+.timer-info {
+  display: grid;
+  gap: 10px;
+  flex: 1;
+}
+.timer {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.timer .num {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-right: 5px;
+}
+.timer .str {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-right: 10px;
+}
+.timer .space {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-right: 10px;
+}
+
+@media (max-width: 850px) {
+  .timer-container {
+    gap: 10px;
+    flex-direction: column-reverse;
+    justify-content: start;
+    align-items: start;
+  }
+  .gift {
+    align-self: flex-end;
+  }
+}
+@media (max-width: 600px) {
+  .timer-section .container {
+    display: contents;
+  }
+  .timer-mega-container {
+    padding: 0;
+  }
+  .timer-container {
+    border-radius: 0px;
+    padding: 10px 45px 20px;
+  }
+
+  .timer .space {
+    font-size: 10px;
+    font-weight: 500;
+    margin-right: 2px;
+  }
+  .gift {
+    height: 70px;
+  }
+}

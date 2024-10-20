@@ -1,0 +1,145 @@
+.maincontent-section {
+  position: relative;
+  margin-bottom: 60px;
+}
+.maincontent-container {
+  max-width: calc(50% + 1570px / 2);
+  margin-left: auto;
+  padding-left: 20px;
+}
+.maincontent-body {
+  display: grid;
+  grid-template-columns: 700px 1fr;
+}
+.maincontent-info {
+  padding-left: 40px;
+}
+.maincontent-header {
+  margin-bottom: 20px;
+}
+.header1 {
+}
+.maincontent-list {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 30px;
+  list-style: circle;
+}
+.arrow-img {
+  position: absolute;
+  left: 0px;
+  top: 10%;
+  transform: translateX(-120%);
+  height: 110%;
+}
+.maincontent-buttons {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.button-with-icon {
+  position: relative;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 30px;
+}
+.button-with-icon img {
+  position: absolute;
+  right: 0px;
+  width: 70px;
+  transform: translateX(50%);
+}
+.maincontent-users {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+}
+.maincontent-users-list {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.maincontent-users-list img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #000;
+}
+.maincontent-users-list li:not(:last-child) {
+  margin-right: -30px;
+}
+.maincontent-users-text {
+}
+
+.maincontent-image-container {
+  position: relative;
+}
+.bigimg {
+  position: absolute;
+  top: -10%;
+  left: 15%;
+  width: 100%;
+  rotate: -25deg;
+  max-width: 600px;
+}
+.maincontent-circle {
+  position: relative;
+  left: 15%;
+  width: 480px;
+  filter: blur(250px);
+}
+
+@media (max-width: 1200px) {
+  .maincontent-body {
+    grid-template-columns: 1fr;
+  }
+  .maincontent-info {
+    padding: 100px 0px;
+    width: 100%;
+    max-width: 650px;
+    padding-left: unset;
+    display: flex;
+    flex-direction: column;
+  }
+  .maincontent-list {
+    text-align: start;
+  }
+  .arrow-img {
+    display: none;
+  }
+  .maincontent-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.3;
+  }
+  .bigimg {
+    position: absolute;
+    left: 60%;
+  }
+}
+
+@media (max-width: 550px) {
+  .bigimg {
+    top: 10%;
+    left: 50%;
+    width: 200%;
+    rotate: 0deg;
+  }
+}
+
+@media (max-width: 500px) {
+  .maincontent-users-list img {
+    width: 50px;
+    height: 50px;
+  }
+  .maincontent-users-list li:not(:last-child) {
+    margin-right: -20px;
+  }
+}

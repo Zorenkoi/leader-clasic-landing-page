@@ -1,0 +1,99 @@
+.navbar {
+}
+.navbar-body {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 15px;
+  padding: 43px 0px;
+}
+.burger-menu-container {
+  display: none;
+  width: 16px;
+  height: 16px;
+}
+.burger-menu-container img {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-logo {
+  height: 50px;
+  margin-right: 40px;
+}
+.navbar-logo img {
+  object-fit: contain;
+  height: 100%;
+}
+.navbar-link-container {
+  flex: 1;
+}
+.navbar-link-container ul {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 10px;
+}
+.navbar-link {
+  display: inline-block;
+  padding: 10px 0px;
+  text-decoration: none;
+  transition: color 0.2s;
+  background: linear-gradient(to right, #ff8924, #ffb017);
+  background-clip: text;
+  color: white;
+  transition: color 0.4s;
+}
+.navbar-link:hover {
+  color: rgba(255, 255, 255, 0.246);
+}
+.navbar-link.active {
+  color: transparent;
+}
+.navbar-link.active::after {
+  content: "✨";
+  padding-left: 4px;
+  color: transparent;
+}
+
+.active {
+}
+.actions {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 10px;
+}
+.navbar-circle {
+  width: 200px;
+  filter: blur(100px);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 850px) {
+  .navbar-link-container {
+    order: 1;
+    flex-basis: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .navbar-body {
+    padding: 20px 0px;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar-link-container {
+    order: 0;
+  }
+}

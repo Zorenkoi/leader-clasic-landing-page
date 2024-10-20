@@ -1,0 +1,107 @@
+.investphone-section {
+  margin-bottom: 200px;
+}
+
+.investphone-body {
+  display: grid;
+  grid-template-columns: 1fr 640px;
+  gap: 50px;
+  align-items: center;
+  padding: 0px 100px;
+}
+.investphone-image-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.investphone-circle {
+  position: absolute;
+  width: 270px;
+  filter: blur(250px);
+}
+.investphone-image {
+  max-width: 430px;
+  width: 100%;
+  margin: 0px auto;
+}
+.investphone-image-container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  max-width: 275px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #98c269 0%, #9edfb6 100%);
+  filter: blur(250px);
+  z-index: -1;
+}
+
+.investphone-header {
+  margin-bottom: 25px;
+}
+
+.investphone-text {
+  margin-bottom: 50px;
+}
+
+.investphone-buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.investphone-button {
+  padding: 0px 30px;
+  height: 70px;
+  border-radius: 35px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  background-color: transparent;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 126.2%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 1200px) {
+  .investphone-section {
+    margin-bottom: 150px;
+  }
+  .investphone-body {
+    padding: unset;
+    position: relative;
+    grid-template-columns: 1fr;
+    align-items: unset;
+    display: flex;
+    justify-content: center;
+  }
+  .investphone-image-container {
+    z-index: -1;
+    opacity: 0.3;
+  }
+  .investphone-content {
+    padding: 100px 0px;
+    width: 100%;
+    max-width: 700px;
+    position: absolute;
+    text-align: center;
+  }
+  .investphone-buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 650px) {
+  .investphone-buttons {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 400px) {
+  .investphone-content {
+    padding: 50px 0px;
+  }
+}

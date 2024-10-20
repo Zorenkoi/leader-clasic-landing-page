@@ -1,0 +1,29 @@
+.app {
+  overflow: hidden;
+}
+.container {
+  max-width: 1570px;
+  padding: 0px 20px;
+  margin: 0px auto;
+}
+
+.content-container {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  gap: 10px;
+}
+
+@media (max-width: 850px) {
+  .content-container {
+    grid-template-columns: 100%;
+    gap: 0px;
+  }
+  .content-container .right {
+    height: 700px;
+  }
+}
+@media (max-width: 650px) {
+  .content-container .right {
+    height: 350px;
+  }
+}
